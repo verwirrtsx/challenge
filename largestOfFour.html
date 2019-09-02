@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组最大值挑战</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	function largestOfFour(arr) {
+		var larger=[];
+	for(let a=0;a<arr.length;a++){
+		//console.log(arr[a]);
+		var alarger=0;
+		for(let b=0;b<arr[a].length;b++){
+			if(arr[a][b]>alarger){
+				alarger =arr[a][b];
+			}
+			
+		}
+		larger.push(alarger);
+		
+	}
+	console.log(larger);
+	// You can do this!
+	return larger;
+	}
+	
+	largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>回文算法</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	function palindrome(str) {
+	// Good luck!
+	//去空格
+	str = str.replace(/\s*/g,"");
+	//去符号
+	// str = str.replace(/[\|\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,"");
+	str = str.replace(/[\|\~\|_\|)\|:\|(\|/\|-]/g,'');
+	//转小写
+	str =str.toLowerCase();
+	str = str.split("");	
+	//console.log(Math.round(7/2));
+	console.log(str);
+	var sum	= Math.floor(str.length /2)*2;
+	if(str.length % 2 ===0 && str.length>0){
+		
+		for(let b=0;b<str.length;b++){
+		if(str[b] != str[str.length-b-1]){
+			return false;
+		}
+	}
+
+	}else{
+	for(let a=0;a<str.length;a++){
+	if(str[a] != str[sum-a]){
+		return false;
+	}
+	}
+	}
+	return true;
+	}
+	
+	console.log(palindrome("0_0 (: /-\ :) 0-0"));
+	
+	//palindrome("eye");
+	
+</script>

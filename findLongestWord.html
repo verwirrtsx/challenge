@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>寻找最长的单词算法挑战</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	function findLongestWord(str) {
+	str= str.split(" ");
+	
+	// console.log(str)
+	var wordlength =1;
+	
+	for(let a=0; a<str.length;a++){
+		if(wordlength <str[a].length){
+			wordlength = str[a].length;
+		}
+		//console.log(str[a].length)
+	}
+	return wordlength;
+	}
+	console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+	findLongestWord("The quick brown fox jumped over the lazy dog");
+</script>
